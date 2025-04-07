@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bài 1</title>
+    <link rel="stylesheet" href="lab10bai1.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" class="form-control" tabindex="1">
+            </div>
+            <div class="form-group">
+                <label for="country">Quốc tịch:</label>
+                <input type="text" id="country" class="form-control" value="Việt Nam" readonly>
+            </div>
+            <div class="form-group">
+                <label for="notes">Ghi chú:</label>
+                <textarea id="notes" class="form-control" tabindex="2" style="background-color: yellow;"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="form-button add">Thêm</button>
+                <button type="button" class="form-button edit">Sửa</button>
+                <button type="button" class="form-button delete" disabled>Xóa</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

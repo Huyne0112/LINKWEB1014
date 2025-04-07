@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Garena</title>
+    <link rel="stylesheet" href="lab9bai2.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Đăng Ký</h2>
+        <input type="text" placeholder="Tên đăng nhập" required>
+        <input type="password" placeholder="Mật khẩu" class="error" required>
+        <input type="password" placeholder="Nhập lại mật khẩu" required>
+        <input type="email" placeholder="Email" required>
+        
+        <label>Giới tính:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Nam"> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+        </div>
+        
+        <select>
+            <option>Việt Nam</option>
+            <option>Singapore</option>
+            <option>Thái Lan</option>
+        </select>
+        <input type="text" placeholder="Số điện thoại (tùy chọn)">
+        
+        <label>Game yêu thích:</label>
+        <div class="game-group" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <label style="white-space: nowrap;"><input type="checkbox" value="Liên Quân"> Liên Quân</label>
+            <label style="white-space: nowrap;"><input type="checkbox" value="Free Fire"> Free Fire</label>
+            <label style="white-space: nowrap;"><input type="checkbox" value="LOL"> LOL</label>
+            <label style="white-space: nowrap;"><input type="checkbox" value="FC ONLINE"> FC ONLINE</label>
+        </div>
+
+        
+        <label>Ghi chú:</label>
+        <textarea rows="3" placeholder="Nhập ghi chú của bạn..."></textarea>
+        
+        <button>Đăng Ký Ngay</button>
+        <p>Đã có tài khoản? <a href="lab9bai1.html">Đăng nhập ngay</a></p>
+    </div>
+    
+
+</body>
+</html>

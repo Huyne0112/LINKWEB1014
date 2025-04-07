@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi mật khẩu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thay đổi mật khẩu</h2>
+        <p>Vui lòng điền thông tin Tài khoản của bạn sử dụng để đăng nhập</p>
+        
+        <div class="input-group">
+            <div class="radio-group">
+                <input type="radio" name="login-method" checked>
+                <label>Email/Tên đăng nhập</label>
+            </div>
+            <input type="text" placeholder="Email/Tên đăng nhập">
+        </div>
+
+        <div class="input-group">
+            <div class="radio-group">
+                <input type="radio" name="login-method">
+                <label>Số điện thoại</label>
+            </div>
+            <select>
+                <option>+84</option>
+                <option>+1</option>
+                <option>+44</option>
+            </select>
+            <input type="text" placeholder="Số điện thoại">
+        </div>
+        
+        <button>TIẾP THEO</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.vmenu {
+    padding: 0;
+    margin: 5px;
+    list-style: none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px gray;
+    width: 200px;
+}
+.vmenu li {
+    border-bottom: 1px dotted orangered;
+}
+.vmenu a {
+    display: block;
+    padding: 8px 5px 8px 30px;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    color: orangered;
+}
+.vmenu a:hover {
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px dotted white;
+}

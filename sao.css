@@ -1,0 +1,44 @@
+strong {
+    color: brown;
+}
+.doan1 {
+    color: red;
+}
+.doan2 {
+    color: blue;
+}
+.doan3 {
+    color: green;
+}
+
+.poem p {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.poem p::first-letter {
+    font-weight: bold;
+}
+
+.poem p span.anh, 
+.poem p span.em {
+    font-weight: bold;
+    color: red;
+}
+
+
+.doan1 {
+    color: #2c3e50;
+}
+.doan2 {
+    color: #2980b9;
+}
+.doan3 {
+    color: #8e44ad;
+}
+.doan4 {
+    color: #2c3e50;
+}

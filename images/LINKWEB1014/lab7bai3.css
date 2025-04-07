@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 69, 0, 0.9);
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+}
+
+.top-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.top-right a:hover {
+    text-decoration: underline;
+}
+
+.company-info {
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.company-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.company-info p {
+    font-size: 16px;
+}
+
+.menu {
+    background: orangered;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}

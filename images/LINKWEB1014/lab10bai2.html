@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bài 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group label {
+            font-weight: bold;
+            font-variant: small-caps;
+            display: block;
+        }
+        .form-control {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .form-button {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .form-button.add {
+            background-color: blue;
+            color: white;
+        }
+        .form-button.edit {
+            background-color: orangered;
+            color: white;
+        }
+        fieldset {
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+</head>
+
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" class="form-control">
+            </div>
+            <fieldset>
+                <legend>Giới tính:</legend>
+                <input type="radio" id="male" name="gender" value="Nam">
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="Nữ">
+                <label for="female">Nữ</label>
+            </fieldset>
+            <div class="form-group">
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="score">Điểm:</label>
+                <input type="number" id="score" class="form-control" min="0" max="10" step="0.25">
+            </div>
+            <div class="form-group">
+                <label for="job">Nghề nghiệp:</label>
+                <input list="jobs" id="job" class="form-control">
+                <datalist id="jobs">
+                    <option value="Giáo viên">
+                    <option value="Kỹ sư">
+                    <option value="Bác sĩ">
+                    <option value="Nhân viên văn phòng">
+                    <option value="Sinh viên">
+                </datalist>
+            </div>
+            <fieldset>
+                <legend>Sở thích:</legend>
+                <input type="checkbox" id="sport" name="hobby" value="Thể thao">
+                <label for="sport">Thể thao</label>
+                <input type="checkbox" id="travel" name="hobby" value="Du lịch">
+                <label for="travel">Du lịch</label>
+                <input type="checkbox" id="music" name="hobby" value="Âm nhạc">
+                <label for="music">Âm nhạc</label>
+                <input type="checkbox" id="food" name="hobby" value="Ẩm thực">
+                <label for="food">Ẩm thực</label>
+            </fieldset>
+            <div class="form-group">
+                <label for="comment">Ghi chú:</label>
+                <textarea id="comment" class="form-control"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn" class="form-button add">Đăng ký</button>
+                <button type="reset" class="form-button edit">Nhập lại</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

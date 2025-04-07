@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Quân Mobile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #0f3460;
+            position: relative;
+        }
+        .logo-menu {
+            display: flex;
+            align-items: center;
+        }
+        .logo-menu img {
+            height: 70px;
+            width: 100px;
+            margin-right: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+
+        .menu a:hover {
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #16213e;
+            padding: 5px 10px;
+            border-radius: 20px;
+            position: absolute;
+            right: 180px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            padding: 5px;
+            width: 200px;
+        }
+        .search-box button {
+            background: #00ffff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #000;
+            font-weight: bold;
+        }
+        .search-box button:hover {
+            background: #00d4d4;
+        }
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .swiper {
+            width: 90%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 3px solid #00ffff;
+            box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.7);
+            position: relative;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .news {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .news-item {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .news-item:hover {
+            box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+        .news-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .qr-code {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 70px;
+            z-index: 1000;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f0c29;
+            color: white;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+        }
+        .hero-image {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .hero-content {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .hero-content h2 {
+            font-size: 36px;
+            color: #00ffff;
+            margin: 0;
+        }
+        .hero-content p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        .video-container {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        .video-container iframe {
+            width: 350px; /* Thu nhỏ video */
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        .hero-icons {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .hero-icons img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .hero-icons img:nth-child(n+2) { 
+            opacity: 0.5; /* Làm mờ ảnh */
+            transition: opacity 0.3s ease-in-out; /* Hiệu ứng chuyển đổi */
+        }
+
+        .hero-icons img:nth-child(n+2):hover { 
+            opacity: 1; /* Khi hover vào sẽ rõ lại */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-menu">
+            <a href="test.html"><img src="https://bookvexe.vn/wp-content/uploads/2023/04/chon-loc-25-logo-lien-quan-cuc-dep-va-doc-dao_2.jpg" alt="Logo Liên Quân"></a>
+            <div class="menu">
+                <a href="https://lienquan.garena.vn/hoc-vien/tuong-skin/">GAMEPLAY</a>
+                <a href="https://lienquan.garena.vn/tin-tuc/">TIN TỨC</a>
+                <a href="https://monica.im/home/chat/li%C3%AAn-qu%C3%A2n-ai/qYJeFfRt">HỖ TRỢ AI</a>
+                <a href="dangki.html">ĐĂNG KÝ</a>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button>Tìm</button>
+        </div>
+    </div>
+</div>
+<img class="qr-code" src="images/Screenshot 2025-03-24 201405.png" alt="Mã QR tải game">
+    <div class="slider-container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="https://lienquan.garena.vn/lien-quan-mobile-don-chao-hop-tac-khung-chinh-thuc-khoi-tranh-abben-energy-dtdv-mua-xuan-2025-tu-ngay-22-02/"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/SeaTalk_IMG_20250219_111035.png"></a></div>
+                <div class="swiper-slide"><a href="https://lienquan.garena.vn/tu-phuong-dai-chien-mua-xuan-2025-chinh-thuc-khoi-tranh/"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/1920.350-KV.jpg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/Cover-homepage_1920x350-3.png"></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="news-item">
+            <a href="https://lienquan.garena.vn/lien-quan-mobile-don-chao-hop-tac-khung-chinh-thuc-khoi-tranh-abben-energy-dtdv-mua-xuan-2025-tu-ngay-22-02/"><img src="https://lienquan.garena.vn/wp-content/uploads/2025/02/SeaTalk_IMG_20250219_110505-428x199.png" alt="News 1"></a>
+            <h3><p>Liên Quân Mobile đón chào hợp tác “khủng”, chính thức khởi tranh ABBEN Energy ĐTDV mùa Xuân 2025 từ ngày 22/02</p></h3>
+        </div>
+        <div class="news-item">
+            <a href="https://lienquan.garena.vn/dieu-chinh-can-bang-20-3-pb-can-nguyen-tien-canh/"><img src="https://lienquan.garena.vn/wp-content/uploads/2025/03/IMG-HOR-0860x0400-016399-860x400-1-428x199.jpg" alt="News 2"></a>
+            <h3><p>Cập nhật cân bằng 20.3</p></h3>
+        </div>
+        <div class="news-item">
+            <a href="https://lienquan.garena.vn/lan-dau-tien-dai-chien-club-toan-quoc-2025-qua-tang-cuc-khung-dung-bo-lo/"><img src="https://lienquan.garena.vn/wp-content/uploads/2025/03/860.400-1-428x199.jpg" alt="News 3"></a>
+            <h3><p>Giải đấu Đại Chiến Club</p></h3>
+        </div>
+        <div class="news-item">
+            <a href="https://lienquan.garena.vn/tong-hop-su-kien-17-03-23-03/"><img src="https://lienquan.garena.vn/wp-content/uploads/2025/03/IMG-HOR-0860x0400-013229-5-428x199.jpg" alt="News 4"></a>
+            <h3><p>Sự kiện mới 17/03 - 23/03</p></h3>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.swiper', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+    </script>
+    <div class="hero-section">
+        <img class="hero-image" src="https://lienquan.garena.vn/wp-content/uploads/2024/06/Krixi-featured.jpg" alt="Tướng Krixi">
+        <div class="hero-content">
+            <h2>Krixi</h2>
+            <p">Tinh Linh Thiên Nhiên - Pháp sư, Cấu rỉa</p>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/yA1U8ftafwA" frameborder="0" allowfullscreen></iframe>
+        </div>        
+        <div class="hero-icons">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/05/3fa6fb1c1695570e79df259229e7a6c9583ff18becc9f1.png" alt="Tướng 1">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/05/8decfe0a19adf4c0db504a34dedb271e658d3f1133b0a1.jpg" alt="Tướng 2">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/06/Honeyview_Arthur_111-e1718875297358.jpg" alt="Tướng 3">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/05/83d9de6ce9963f9ea406db2edd81707f5ee04e755f2a71-2.jpg" alt="Tướng 4">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/05/6ee0ca6c7839effd7b244bbe29f50a9e5d256414acc441.jpg" alt="Tướng 5">
+        </div>
+    </div>
+    <footer style="background-color: rgb(37, 40, 41) ; padding: 20px; text-align: center; color: #ccc; margin-top: 50px;">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/LienquanMobile" target="_blank"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/icon-facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/@LienQuanMobileSportsGarena" target="_blank"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/icon-youtube.png" alt="YouTube"></a>
+            <a href="https://www.youtube.com/@LienQuanMobileSportsGarena" target="_blank"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/icon-tiktok.png" alt="TikTok"></a>
+            <a href="https://www.instagram.com/lienquanmobile" target="_blank"><img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/icon-instagram.png" alt="Instagram"></a>
+        </div>
+        
+        <div>
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/logo-1.png" alt="Vietnam Esports" height="40">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/logo-2.png" alt="Garena" height="40">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/logo-3.png" alt="TiMi Studios" height="40">
+            <img src="https://lienquan.garena.vn/wp-content/uploads/2024/02/logo-4.png" alt="Tencent Games" height="40">
+        </div>
+        <h3>CÔNG TY CỔ PHẦN GIẢI TRÍ VÀ THỂ THAO ĐIỆN TỬ VIỆT NAM</h3>
+        <p>GIẤY CNĐKKD SỐ 0105301438, CẤP LẦN ĐẦU NGÀY 10/05/2011</p>
+        <p>CƠ QUAN CẤP: PHÒNG ĐĂNG KÝ KINH DOANH – SỞ KẾ HOẠCH VÀ ĐẦU TƯ TP HÀ NỘI</p>
+        <p>ĐỊA CHỈ: TẦNG 6, TÒA NHÀ CAPITAL PLACE, SỐ 29 ĐƯỜNG LIỄU GIAI, PHƯỜNG CỐNG VỊ, QUẬN BA ĐÌNH, TP HÀ NỘI</p>
+        <p>ĐIỆN THOẠI: 024 7305 3939</p>
+        <p>
+            <a href="#" style="color: #00ffff; text-decoration: none;">Điều khoản dịch vụ</a> •
+            <a href="#" style="color: #00ffff; text-decoration: none;">Chính sách bảo mật</a> •
+            <a href="#" style="color: #00ffff; text-decoration: none;">Chính sách giải quyết tranh chấp</a>
+        </p>
+    </footer>
+</body>
+</html>
